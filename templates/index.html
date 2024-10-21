@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faça seu Pedido - Pizzaria</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Bem-vindo à Pizzaria!</h1>
+        <form method="POST">
+            <label for="tipo_pizza">Escolha sua Pizza:</label>
+            <select id="tipo_pizza" name="tipo_pizza" required>
+                <option value="marguerita">Marguerita</option>
+                <option value="pepperoni">Pepperoni</option>
+            </select>
+
+            <label for="metodo_pagamento">Método de Pagamento:</label>
+            <select id="metodo_pagamento" name="metodo_pagamento" required>
+                <option value="cartao">Cartão</option>
+                <option value="dinheiro">Dinheiro</option>
+            </select>
+
+            <button type="submit">Fazer Pedido</button>
+        </form>
+    </div>
+</body>
+</html>
